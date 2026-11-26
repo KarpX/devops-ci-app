@@ -129,8 +129,6 @@ jobs:
     needs: image
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: [self-hosted, devops-vm]
-    permissions:
-      contents: read
     concurrency:
       group: deploy-devops-vm
       cancel-in-progress: false
